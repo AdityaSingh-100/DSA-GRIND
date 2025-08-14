@@ -55,12 +55,19 @@ void mergeSort(vector<int> &arr, int n)
     mS(arr, 0, n - 1);
 }
 
+// void withoutMerge(vector<int> &arr, int n)
+// {
+//     cout << "sorted array:";
+//     sort(arr.begin(), arr.end());
+// }
+
 int main()
 {
     vector<int> arr = {3, 1, 2, 4, 1, 5, 2, 6, 4};
 
     mergeSort(arr, arr.size());
 
+    // withoutMerge(arr, arr.size());
     for (auto it : arr)
     {
         cout << it << " ";
