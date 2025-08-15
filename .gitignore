@@ -3,3 +3,22 @@ My_Learning_w3/
 
 # VS Code settings
 .vscode/
+
+# C++ compiled files
+*.exe
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# C++ output files
+*.out
+output.txt
+
+# Temporary files
+*.tmp
+*.temp
+*~
