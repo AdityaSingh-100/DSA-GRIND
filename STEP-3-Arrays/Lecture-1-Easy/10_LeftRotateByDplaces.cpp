@@ -5,7 +5,7 @@ using namespace std;
 void leftRotate(int arr[], int n, int d)
 {
     d = d % n; // will give remainder
-     int temp[d];
+    int temp[d];
 
     for (int i = 0; i < d; i++)
     {
