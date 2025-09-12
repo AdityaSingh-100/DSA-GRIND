@@ -1,32 +1,31 @@
 #include <iostream>
-#include <map>
 #include <vector>
-using namespace std;
+using namespace std;    
 
-int MajorityElements(vector<int> &arr, int n)
+int MajorityElement(vector<int> &arr, int n)
 {
-    map<int, int> mpp;
-
     for (int i = 0; i < n; i++)
     {
-        mpp[arr[i]]++;
-    }
-    for (auto it : mpp)
-    {
-        if (it.second > (n / 2))
+        int cnt = 0;
+        for (int j = 0; j < n; j++)
         {
-            return it.first;
+            if (arr[j] == arr[i])
+            {
+                cnt++;
+            }
+        }
+        if (cnt > (n / 2))
+        {
+            return arr[i];
         }
     }
-    return -1;
 }
 
 int main()
-
 {
     vector<int> arr = {2, 2, 3, 3, 1, 2, 2};
     int n = arr.size();
-    int ans = MajorityElements(arr, n);
+    int ans = MajorityElement(arr, n);
     cout << ans;
     return 0;
 }

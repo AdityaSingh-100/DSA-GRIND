@@ -27,14 +27,9 @@ int main()
     int target = 14;
     vector<int> ans = TwoSum(arr, n, target);
 
-    if (ans[0] != -1)
+    for (auto it : ans)
     {
-        cout << "Indices: [" << ans[0] << ", " << ans[1] << "]" << endl;
-        cout << "Values: " << arr[ans[0]] << " + " << arr[ans[1]] << " = " << target << endl;
-    }
-    else
-    {
-        cout << "No two sum solution found" << endl;
+        cout << it << " ";
     }
 
     return 0;
