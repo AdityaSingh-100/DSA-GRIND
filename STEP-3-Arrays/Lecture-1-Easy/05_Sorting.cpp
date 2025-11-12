@@ -1,6 +1,6 @@
 
 #include <iostream>
-
+#include <stdio.h>
 using namespace std;
 
 bool isSorted(int arr[], int n)
