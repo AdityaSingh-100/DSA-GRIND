@@ -14,7 +14,7 @@ int findAllSubarraysWithGivenSum(vector<int> &arr, int k)
     {
         // add current element to prefix Sum:
         preSum += arr[i];
-
+ 
         // Calculate x-k:
         int remove = preSum - k;
 
