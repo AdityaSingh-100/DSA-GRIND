@@ -6,7 +6,8 @@ int main()
 
     getline(cin, str);
 
-    cout << str;
+    cout << str.length();
+
 
     return 0;
 }

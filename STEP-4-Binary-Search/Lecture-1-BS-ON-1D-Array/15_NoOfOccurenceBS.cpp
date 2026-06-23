@@ -19,7 +19,7 @@ int firstOccurence(vector<int> &arr, int n, int target)
         }
         else
         {
-            low = mid + 1;
+            high = mid - 1;
         }
     }
     return first;
@@ -38,7 +38,7 @@ int lastOccurence(vector<int> &arr, int n, int target)
         }
         else if (arr[mid] < target)
         {
-            high = mid - 1;
+            low = mid + 1;
         }
         else
         {

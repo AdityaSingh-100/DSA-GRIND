@@ -11,11 +11,11 @@
 //     for (int i = 0; i < n; i++)
 //     {
 
-//         // Skip this element if already processed
+        // Skip this element if already processed
 //         if (visited[i] == true)
 //             continue;
 
-//         // Count frequency
+         // Count frequency
 //         int count = 1;
 //         for (int j = i + 1; j < n; j++)
 //         {

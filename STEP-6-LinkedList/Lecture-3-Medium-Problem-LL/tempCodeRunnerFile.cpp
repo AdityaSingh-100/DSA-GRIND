@@ -45,44 +45,23 @@ void print(Node *head)
     }
 }
 
-Node *DeleteMiddleNode(Node *head)
+Node *MiddleNode(Node *head)
 {
-    if (head == NULL || head->next == NULL)
+    Node *slow = head;
+    Node *fast = head;
+    while (fast != NULL && fast->next != NULL)
     {
-        return NULL;
+        slow = slow->next;
+        fast = fast->next->next;
     }
-
-    int cnt = 0;
-    Node *temp = head;
-    while (temp != nullptr)
-    {
-        cnt++;
-        temp = temp->next;
-    }
-    int middleNode = (int)((cnt) / 2);
-
-    temp = head;
-    while (temp != nullptr)
-    {
-        middleNode = middleNode - 1;
-        if (middleNode == 0)
-        {
-
-            Node *prev = temp->next;
-            temp->next = temp->next->next;
-            free(prev);
-            break;
-        }
-        temp = temp->next;
-    }
-    return head;
+    return slow;
 }
 
 int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5};
     Node *head = convertArrToLL(arr);
-    Node *temp = DeleteMiddleNode(head);
+    Node *temp = MiddleNode(head);
     print(temp);
     return 0;
 }
